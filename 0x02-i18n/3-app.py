@@ -15,6 +15,7 @@ class Config:
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
+@babel.localeselector
 def get_locale():
     """get the user's locale"""
     return request.accept_languages.best_match(["en", "fr"])
